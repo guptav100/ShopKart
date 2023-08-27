@@ -24,7 +24,8 @@ function Contact() {
       alert("Form data is successfully sent.");
       console.log(formvalues);
     }
-  }, [formError, isSubmit]); // Add formError and isSubmit to the dependency array
+  }, [formError, isSubmit, formvalues]);
+  
 
   const validate = (values) => {
     const errors = {};
@@ -45,7 +46,7 @@ function Contact() {
   };
 
   return (
-     <div className="big-b">
+    <div className="big-b">
       <div className="big-c">
         <div className="big-c-1">
           <div className="big-c-11">
