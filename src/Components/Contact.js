@@ -45,7 +45,59 @@ function Contact() {
   };
 
   return (
-    // ...rest of your component code
+     <div className="big-b">
+      <div className="big-c">
+        <div className="big-c-1">
+          <div className="big-c-11">
+            <p className="p-1">Newsletter</p>
+            <p className="p-2">
+              Get news about articles and updates <br /> in your inbox
+            </p>
+          </div>
+          <div className="big-c-12">
+            <form onSubmit={handleSubmit} className="form" action="">
+              <input
+                className="input"
+                type="text"
+                name="name"
+                placeholder="NAME"
+                value={formvalues.name}
+                onChange={handleChange}
+              />
+              <p className="errorshow">{formError.name}</p>
+
+              <br />
+              <input
+                className="input"
+                type="email"
+                name="email"
+                placeholder="EMAIL"
+                value={formvalues.email}
+                onChange={handleChange}
+              />
+              <p className="errorshow">{formError.email}</p>
+
+              <br />
+              <input
+                className="input"
+                type="text"
+                name="message"
+                placeholder="MESSAGE"
+                value={formvalues.message}
+                onChange={handleChange}
+              />
+              <p className="errorshow">{formError.message}</p>
+              <div>
+                <button className="send">SEND</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div className="big-c-2">
+          GET <br /> IN TOUCH
+        </div>
+      </div>
+    </div>
   );
 }
 
